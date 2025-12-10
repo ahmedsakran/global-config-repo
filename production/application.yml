@@ -1,1 +1,8 @@
- 
+spring:
+  application:
+    name: 'mebroker-config-pro'
+
+test:
+  message: "Hello from PROD config"
+server:
+  port: 9002
