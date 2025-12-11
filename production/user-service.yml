@@ -1,1 +1,11 @@
- 
+spring:
+  application:
+    name: user-service
+
+server:
+  port: 8080
+
+user:
+  message: "User service running in PRODUCTION mode"
+  cache:
+    enabled: true

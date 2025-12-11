@@ -1,0 +1,13 @@
+global-config-repo/
+│
+├── development/
+│   ├── application.yml          # Shared config for all services
+│   ├── api-gateway.yml
+│   ├── auth-service.yml
+│   └── user-service.yml
+│
+└── production/
+    ├── application.yml
+    ├── api-gateway.yml
+    ├── auth-service.yml
+    └── user-service.yml

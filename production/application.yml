@@ -1,8 +1,16 @@
+server:
+  port: 9001
+  message: "Production environment - Global config"
+
 spring:
   application:
-    name: 'mebroker-config-pro'
+    name: mebroker-config-prod
 
-test:
-  message: "Hello from PROD config"
-server:
-  port: 9002
+  datasource:
+    url: jdbc:mysql://prod-db:3306/proddb
+    username: prod_user
+    password: prod_pass
+
+logging:
+  level:
+    root: INFO

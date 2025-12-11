@@ -1,1 +1,11 @@
- 
+spring:
+  application:
+    name: user-service
+
+server:
+  port: 8082
+
+user:
+  message: "User service running in DEV mode"
+  cache:
+    enabled: false
