@@ -1,11 +1,22 @@
+server:
+  port: 8082
+
 spring:
   application:
     name: user-service
 
-server:
-  port: 8082
+  datasource:
+    url: jdbc:h2:mem:userdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
 
-user:
-  message: "User service running in DEV mode"
-  cache:
-    enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
