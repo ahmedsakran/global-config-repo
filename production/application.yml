@@ -1,16 +1,33 @@
-server:
-  port: 9001
-  message: "Production environment - Global config"
+# server:
+#   port: 9001
+#   message: "Production environment - Global config"
+
+# spring:
+#   application:
+#     name: mebroker-config-prod
+
+#   datasource:
+#     url: jdbc:mysql://prod-db:3306/proddb
+#     username: prod_user
+#     password: prod_pass
+
+# logging:
+#   level:
+#     root: INFO
+
+
 
 spring:
-  application:
-    name: mebroker-config-prod
-
-  datasource:
-    url: jdbc:mysql://prod-db:3306/proddb
-    username: prod_user
-    password: prod_pass
+  profiles:
+    active: production
 
 logging:
   level:
     root: INFO
+    org.springframework.web: WARN
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

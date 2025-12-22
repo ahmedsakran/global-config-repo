@@ -1,19 +1,27 @@
-server:
-  port: 9001
-  message: "Development environment - Global config"
+# server:
+#   port: 9001
+#   message: "Development environment - Global config"
 
+# spring:
+#   application:
+#     name: mebroker-config-dev
+
+#   datasource:
+#     url: jdbc:mysql://localhost:3306/devdb
+#     username: dev_user
+#     password: dev_pass
+
+# test:
+#   message: "Hello from DEV config"
+
+# logging:
+#   level:
+#     root: DEBUG
 spring:
-  application:
-    name: mebroker-config-dev
-
-  datasource:
-    url: jdbc:mysql://localhost:3306/devdb
-    username: dev_user
-    password: dev_pass
-
-test:
-  message: "Hello from DEV config"
+  profiles:
+    active: development
 
 logging:
   level:
-    root: DEBUG
+    root: INFO
+    org.springframework.web: DEBUG

@@ -1,13 +1,40 @@
-spring:
-  application:
-    name: api-gateway
+# spring:
+#   application:
+#     name: api-gateway
+
+# server:
+#   port: 80
+
+# gateway:
+#   routes:
+#     - id: user-service
+#       uri: http://user-service:8080
+#       predicates:
+#         - Path=/users/**
 
 server:
   port: 80
 
-gateway:
-  routes:
-    - id: user-service
-      uri: http://user-service:8080
-      predicates:
-        - Path=/users/**
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+      routes:
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/auth/**
+
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/users/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-server:8761/eureka
