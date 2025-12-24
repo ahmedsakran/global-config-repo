@@ -17,9 +17,9 @@
 # logging:
 #   level:
 #     root: DEBUG
-spring:
-  profiles:
-    active: development
+# spring:
+#   profiles:
+#     active: development
 
 logging:
   level:
