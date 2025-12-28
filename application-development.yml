@@ -1,7 +1,6 @@
 security:
   jwt:
-    secret: VERY_SECRET_KEY_CHANGE_ME_123456789
-
+    secret: MySuperSecretKeyForJwtAuthService123456789
 logging:
   level:
     root: INFO
