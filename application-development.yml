@@ -1,7 +1,16 @@
 security:
   jwt:
-    secret: MySuperSecretKeyForJwtAuthService123456789
+    secret: ${JWT_SECRET}
+
 logging:
   level:
     root: INFO
-    org.springframework.web: DEBUG
+    com.mebroker: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

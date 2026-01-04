@@ -11,3 +11,4 @@ global-config-repo/
     ├── api-gateway.yml
     ├── auth-service.yml
     └── user-service.yml
+-----------------------------------------------
