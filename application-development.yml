@@ -1,6 +1,9 @@
+# security:
+#   jwt:
+#     secret: ${JWT_SECRET}
 security:
   jwt:
-    secret: ${JWT_SECRET}
+    enabled: true
 
 logging:
   level:
