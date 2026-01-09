@@ -1,6 +1,9 @@
 security:
   jwt:
     enabled: true
+    secret: ${JWT_SECRET}
+    access-expiration: ${JWT_ACCESS_EXPIRATION:900000}        # 15 min
+    refresh-expiration: ${JWT_REFRESH_EXPIRATION:604800000}  # 7 days
 
 logging:
   level:
