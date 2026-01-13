@@ -12,7 +12,7 @@ spring:
   jpa:
     open-in-view: false
     hibernate:
-      ddl-auto: update #validate   # ⛔ لا update
+      ddl-auto: create #validate   # ⛔ لا update
     properties:
       hibernate:
         format_sql: true
